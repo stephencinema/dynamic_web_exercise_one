@@ -10,11 +10,11 @@
   <body>
     <header>
       <nav>
-        <a>Box Model</a>
-        <a>Flex Box</a>
-        <a>Positioning Elements</a>
-        <a>Heading Usage</a>
-        <a>Simple JavaScript</a>
+        <a href="#box-model">Box Model</a>
+        <a href="#flex-box">Flex Box</a>
+        <a href="#positioning-section">Positioning Elements</a>
+        <a href="#heading-section">Heading Usage</a>
+        <a href="#simple-javascript">Simple JavaScript</a>
       </nav>
     </header>
     <main>
@@ -38,12 +38,12 @@
               <h1>Display: Flex</h1>
             </div>
           </div>
-          <div class="interior-flex--horizontal">
+          <div class="interior-flex--vertical">
             <div></div>
             <div></div>
             <div></div>
           </div>
-          <div class="interior-flex--vertical">
+          <div class="interior-flex--horizontal">
             <div></div>
             <div></div>
             <div></div>
@@ -80,9 +80,30 @@
       </section>
       <!-- Simple JavaScript -->
       <section id="simple-javascript" class="simple-javascript-section section-element">
-        <div class="interior"></div>
+        <script>
+          let counter = 0;
+          function increaseCounterValue() {
+            counter = counter + 1;
+            const counterDiv = document.querySelector("#counter");
+            counterDiv.innerHTML = counter;
+          }
+        </script>
+        <div class="interior">
+          <h1>Simple JavaScript</h1>
+          <div class="counter-button-wrapper">
+            <p id="counter">0</p>
+            <div id="button">
+              <button onclick="increaseCounterValue()">Click to Increase</button>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
-    <footer></footer>
+    <!-- Footer -->
+    <footer id="student-footer" class="footer-section section-element">
+      <div class="footer-interior interior">
+        <p>Stephen Shadrach - Fall, 2022</p>
+      </div>
+    </footer>
   </body>
 </html>
